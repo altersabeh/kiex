@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 
-KIEX_HOME="$HOME/.kiex"
+if [[ -z "$KIEX_HOME" ]]; then
+  KIEX_HOME="$HOME/.kiex"
+fi
 KIEX_BIN_PATH="$KIEX_HOME/bin/kiex"
 KIEX_SCRIPTS_PATH="$KIEX_HOME/scripts"
 
-base_path="$HOME/.kiex"
+base_path="$KIEX_HOME"
 build_path="${base_path}/builds"
 elixirs_path="${base_path}/elixirs"
-elixirs_source_path="\$HOME/.kiex/elixirs"
+elixirs_source_path=""${base_path}/elixirs"
 mix_archives_path="${base_path}/mix/archives"
-mix_archives_source_path="\$HOME/.kiex/mix/archives"
-kiex_url="https://raw.githubusercontent.com/taylor/kiex/master/kiex"
+mix_archives_source_path=""${base_path}/mix/archives"
+kiex_url="https://raw.githubusercontent.com/altersabeh/kiex/master/kiex"
 cached_release_list="$KIEX_HOME/.cached_release_list"
 cached_branch_list="$KIEX_HOME/.cached_branch_list"
 
