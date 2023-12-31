@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo $KIEX_HOME
+
 if [[ -z "$KIEX_HOME" ]]; then
   KIEX_HOME="$HOME/.kiex"
 fi
