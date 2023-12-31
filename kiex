@@ -76,7 +76,7 @@ if [ "$INSTALL_KIEX" = 1 ] ; then
     exec "$KIEX_HOME/bin/kiex" selfupdate
   else
     mkdir -p "${KIEX_HOME}/bin"
-    \curl -sSL ${AUTH_HEADER[*]} -o "$KIEX_HOME/bin/kiex" https://raw.githubusercontent.com/taylor/kiex/master/kiex
+    \curl -sSL ${AUTH_HEADER[*]} -o "$KIEX_HOME/bin/kiex" https://raw.githubusercontent.com/altersabeh/kiex/master/kiex
     chmod +x "$KIEX_HOME/bin/kiex"
 
     echo "Running initial environment setup"
@@ -623,7 +623,7 @@ function install_elixir() {
 
   if [ ! "$?" = 0 ] ; then
     echo "Problem with Elixir build.  Aborting!"
-    echo "Please report via https://github.com/taylor/kiex/issues/new"
+    echo "Please report via https://github.com/altersabeh/kiex/issues/new"
     echo "   Include the operating system, erlang version, and shell being used"
     exit 1
   fi
