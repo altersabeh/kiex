@@ -12,7 +12,7 @@ elixirs_path="${base_path}/elixirs"
 elixirs_source_path="${base_path}/elixirs"
 mix_archives_path="${base_path}/mix/archives"
 mix_archives_source_path="${base_path}/mix/archives"
-kiex_url="https://raw.githubusercontent.com/altersabeh/kiex/master/kiex"
+kiex_url="https://raw.githubusercontent.com/altersabeh/kiex/with-custom-install/kiex"
 cached_release_list="$KIEX_HOME/.cached_release_list"
 cached_branch_list="$KIEX_HOME/.cached_branch_list"
 
@@ -76,7 +76,7 @@ if [ "$INSTALL_KIEX" = 1 ] ; then
     exec "$KIEX_HOME/bin/kiex" selfupdate
   else
     mkdir -p "${KIEX_HOME}/bin"
-    \curl -sSL ${AUTH_HEADER[*]} -o "$KIEX_HOME/bin/kiex" https://raw.githubusercontent.com/altersabeh/kiex/master/kiex
+    \curl -sSL ${AUTH_HEADER[*]} -o "$KIEX_HOME/bin/kiex" https://raw.githubusercontent.com/altersabeh/kiex/with-custom-install/kiex
     chmod +x "$KIEX_HOME/bin/kiex"
 
     echo "Running initial environment setup"
